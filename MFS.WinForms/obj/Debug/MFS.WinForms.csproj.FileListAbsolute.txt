@@ -1,9 +1,0 @@
-C:\Users\Sh\source\repos\MyFileStorage\MFS.WinForms\bin\Debug\MFS.WinForms.exe.config
-C:\Users\Sh\source\repos\MyFileStorage\MFS.WinForms\bin\Debug\MFS.WinForms.exe
-C:\Users\Sh\source\repos\MyFileStorage\MFS.WinForms\bin\Debug\MFS.WinForms.pdb
-C:\Users\Sh\source\repos\MyFileStorage\MFS.WinForms\obj\Debug\MFS.WinForms.csproj.AssemblyReference.cache
-C:\Users\Sh\source\repos\MyFileStorage\MFS.WinForms\obj\Debug\MFS.WinForms.Properties.Resources.resources
-C:\Users\Sh\source\repos\MyFileStorage\MFS.WinForms\obj\Debug\MFS.WinForms.csproj.GenerateResource.cache
-C:\Users\Sh\source\repos\MyFileStorage\MFS.WinForms\obj\Debug\MFS.WinForms.csproj.CoreCompileInputs.cache
-C:\Users\Sh\source\repos\MyFileStorage\MFS.WinForms\obj\Debug\MFS.WinForms.exe
-C:\Users\Sh\source\repos\MyFileStorage\MFS.WinForms\obj\Debug\MFS.WinForms.pdb
