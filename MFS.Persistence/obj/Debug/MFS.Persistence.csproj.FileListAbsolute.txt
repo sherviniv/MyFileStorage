@@ -1,0 +1,5 @@
+C:\Users\Sh\source\repos\MyFileStorage\MFS.Persistence\bin\Debug\MFS.Persistence.dll
+C:\Users\Sh\source\repos\MyFileStorage\MFS.Persistence\bin\Debug\MFS.Persistence.pdb
+C:\Users\Sh\source\repos\MyFileStorage\MFS.Persistence\obj\Debug\MFS.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Sh\source\repos\MyFileStorage\MFS.Persistence\obj\Debug\MFS.Persistence.dll
+C:\Users\Sh\source\repos\MyFileStorage\MFS.Persistence\obj\Debug\MFS.Persistence.pdb

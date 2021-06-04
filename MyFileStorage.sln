@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8BE3BA92-AA55-4A83-A361-FDE97C4657C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MFS.WinForms", "MFS.WinForms\MFS.WinForms.csproj", "{EAC8F39C-8CD2-404E-9383-90F35887386E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MFS.Persistence", "MFS.Persistence\MFS.Persistence.csproj", "{58CE6127-7FF4-4A0F-BEA4-812DD03AD323}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAC8F39C-8CD2-404E-9383-90F35887386E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAC8F39C-8CD2-404E-9383-90F35887386E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAC8F39C-8CD2-404E-9383-90F35887386E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAC8F39C-8CD2-404E-9383-90F35887386E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58CE6127-7FF4-4A0F-BEA4-812DD03AD323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58CE6127-7FF4-4A0F-BEA4-812DD03AD323}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58CE6127-7FF4-4A0F-BEA4-812DD03AD323}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58CE6127-7FF4-4A0F-BEA4-812DD03AD323}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EAC8F39C-8CD2-404E-9383-90F35887386E} = {8BE3BA92-AA55-4A83-A361-FDE97C4657C5}
+		{58CE6127-7FF4-4A0F-BEA4-812DD03AD323} = {8BE3BA92-AA55-4A83-A361-FDE97C4657C5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {364A1794-F12B-45AF-A2D9-40D2DBBAB64D}
+	EndGlobalSection
+EndGlobal
