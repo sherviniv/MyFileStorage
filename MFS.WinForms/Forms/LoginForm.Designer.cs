@@ -122,6 +122,7 @@ namespace MFS.WinForms.Forms
             this.txtPassword.Location = new System.Drawing.Point(8, 6);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(5);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(398, 26);
             this.txtPassword.TabIndex = 0;
             // 
@@ -190,6 +191,7 @@ namespace MFS.WinForms.Forms
             this.lblRegister.Size = new System.Drawing.Size(109, 21);
             this.lblRegister.TabIndex = 6;
             this.lblRegister.Text = "Register Now";
+            this.lblRegister.Click += new System.EventHandler(this.lblRegister_Click);
             // 
             // lblMessage
             // 

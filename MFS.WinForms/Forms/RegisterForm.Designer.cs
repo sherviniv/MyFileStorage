@@ -29,6 +29,7 @@ namespace MFS.WinForms.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.lbRegister = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -196,6 +197,7 @@ namespace MFS.WinForms.Forms
             this.txtPassword.Location = new System.Drawing.Point(8, 6);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(5);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(275, 20);
             this.txtPassword.TabIndex = 0;
             // 
@@ -218,6 +220,7 @@ namespace MFS.WinForms.Forms
             this.txtRePassword.Location = new System.Drawing.Point(8, 6);
             this.txtRePassword.Margin = new System.Windows.Forms.Padding(5);
             this.txtRePassword.Name = "txtRePassword";
+            this.txtRePassword.PasswordChar = '*';
             this.txtRePassword.Size = new System.Drawing.Size(275, 20);
             this.txtRePassword.TabIndex = 0;
             // 
@@ -256,6 +259,7 @@ namespace MFS.WinForms.Forms
             this.btnRegister.TabIndex = 6;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // btnExit
             // 
@@ -270,6 +274,7 @@ namespace MFS.WinForms.Forms
             this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lbLogin
             // 
@@ -283,6 +288,7 @@ namespace MFS.WinForms.Forms
             this.lbLogin.Size = new System.Drawing.Size(152, 21);
             this.lbLogin.TabIndex = 7;
             this.lbLogin.Text = "Back To Login Form";
+            this.lbLogin.Click += new System.EventHandler(this.lbLogin_Click);
             // 
             // lblMessage
             // 
@@ -343,9 +349,11 @@ namespace MFS.WinForms.Forms
             this.Controls.Add(this.lbRegister);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";
+            this.Load += new System.EventHandler(this.RegisterForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

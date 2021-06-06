@@ -69,8 +69,10 @@
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\ILoginView.cs" />
+    <Compile Include="Interfaces\IRegisterView.cs" />
     <Compile Include="Models\LoginUserViewModel.cs" />
     <Compile Include="Presenters\LoginPresenter.cs" />
+    <Compile Include="Presenters\RegisterPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\LoginForm.resx">

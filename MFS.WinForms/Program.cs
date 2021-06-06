@@ -25,11 +25,17 @@ namespace MFS.WinForms
             var filePermissionRepository = new FilePermissionRepository();
             var storageFileRepository = new StorageFileRepository();
 
-            //Login Form
-            var loginView = new LoginForm();
-            var loginPresenter = new LoginPresenter(loginView, userRepository);
+            //Register Form
+            var registerView = new RegisterForm();
+            var registerPresenter = new RegisterPresenter(registerView, userRepository);
 
-            Application.Run(new RegisterForm());
+            //Login Form
+            var loginView = new LoginForm(registerView);
+            var loginPresenter = new LoginPresenter(loginView, userRepository);
+            registerView.LoginForm = loginView;
+
+
+            Application.Run(loginView);
         }
     }
 }
