@@ -1,4 +1,6 @@
-﻿using MFS.WinForms.Forms;
+﻿using MFS.Persistence.Repository;
+using MFS.WinForms.Forms;
+using MFS.WinForms.Presenters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +19,17 @@ namespace MFS.WinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+
+            //Repositories
+            var userRepository = new UserRepository();
+            var filePermissionRepository = new FilePermissionRepository();
+            var storageFileRepository = new StorageFileRepository();
+
+            //Login Form
+            var loginView = new LoginForm();
+            var loginPresenter = new LoginPresenter(loginView, userRepository);
+
+            Application.Run(loginView);
         }
     }
 }
