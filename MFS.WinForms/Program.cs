@@ -29,7 +29,7 @@ namespace MFS.WinForms
             var loginView = new LoginForm();
             var loginPresenter = new LoginPresenter(loginView, userRepository);
 
-            Application.Run(loginView);
+            Application.Run(new RegisterForm());
         }
     }
 }

@@ -42,10 +42,10 @@ namespace MFS.WinForms.Forms
             this.lblVersion = new System.Windows.Forms.Label();
             this.chkRemmeberMe = new System.Windows.Forms.CheckBox();
             this.lblRegister = new System.Windows.Forms.Label();
-            this.picGradient = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.lblMessage = new System.Windows.Forms.Label();
+            this.picGradient = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGradient)).BeginInit();
@@ -191,6 +191,17 @@ namespace MFS.WinForms.Forms
             this.lblRegister.TabIndex = 6;
             this.lblRegister.Text = "Register Now";
             // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.BackColor = System.Drawing.Color.Transparent;
+            this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.ForeColor = System.Drawing.Color.Red;
+            this.lblMessage.Location = new System.Drawing.Point(237, 348);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(0, 17);
+            this.lblMessage.TabIndex = 1;
+            // 
             // picGradient
             // 
             this.picGradient.BackgroundImage = global::MFS.WinForms.Properties.Resources.leftside;
@@ -201,17 +212,6 @@ namespace MFS.WinForms.Forms
             this.picGradient.Size = new System.Drawing.Size(192, 450);
             this.picGradient.TabIndex = 0;
             this.picGradient.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(228)))), ((int)(((byte)(253)))));
-            this.pictureBox1.Image = global::MFS.WinForms.Properties.Resources.mfs;
-            this.pictureBox1.Location = new System.Drawing.Point(602, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(52, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
@@ -224,23 +224,23 @@ namespace MFS.WinForms.Forms
             this.label3.TabIndex = 1;
             this.label3.Text = "MFS";
             // 
-            // lblMessage
+            // pictureBox1
             // 
-            this.lblMessage.AutoSize = true;
-            this.lblMessage.BackColor = System.Drawing.Color.Transparent;
-            this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMessage.ForeColor = System.Drawing.Color.Red;
-            this.lblMessage.Location = new System.Drawing.Point(237, 348);
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(0, 17);
-            this.lblMessage.TabIndex = 1;
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(228)))), ((int)(((byte)(253)))));
+            this.pictureBox1.Image = global::MFS.WinForms.Properties.Resources.mfs;
+            this.pictureBox1.Location = new System.Drawing.Point(602, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(52, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(228)))), ((int)(((byte)(253)))));
-            this.ClientSize = new System.Drawing.Size(696, 450);
+            this.ClientSize = new System.Drawing.Size(700, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.chkRemmeberMe);
             this.Controls.Add(this.btnExit);
@@ -288,8 +288,8 @@ namespace MFS.WinForms.Forms
         private System.Windows.Forms.Label lblVersion;
         private System.Windows.Forms.CheckBox chkRemmeberMe;
         private System.Windows.Forms.Label lblRegister;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
