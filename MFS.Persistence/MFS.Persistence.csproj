@@ -57,12 +57,12 @@
     <Compile Include="Models\StorageFile.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\FilePermissionRepository.cs" />
-    <Compile Include="Repository\IFilePermissionRepository.cs" />
-    <Compile Include="Repository\IStorageFileRepository.cs" />
-    <Compile Include="Repository\IUserRepository.cs" />
-    <Compile Include="Repository\StorageFileRepository.cs" />
-    <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="Repositories\FilePermissionRepository.cs" />
+    <Compile Include="Repositories\IFilePermissionRepository.cs" />
+    <Compile Include="Repositories\IStorageFileRepository.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
+    <Compile Include="Repositories\StorageFileRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
