@@ -1,6 +1,7 @@
 ﻿using MFS.Persistence.Repository;
 using MFS.WinForms.Forms;
 using MFS.WinForms.Presenters;
+using MFS.WinForms.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,8 +35,13 @@ namespace MFS.WinForms
             var loginPresenter = new LoginPresenter(loginView, userRepository);
             registerView.LoginForm = loginView;
 
+            //Storage View
+            var storageView = new StorageView();
 
-            Application.Run(loginView);
+            //MainForm
+            var mainForm = new MainForm(storageView);
+
+            Application.Run(mainForm);
         }
     }
 }
