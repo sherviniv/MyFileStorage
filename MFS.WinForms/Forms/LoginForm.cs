@@ -15,7 +15,8 @@ namespace MFS.WinForms.Forms
     public partial class LoginForm : Form, ILoginView
     {
         public LoginPresenter Presenter { get; set; }
-        public Form _registerForm { get; set; }
+        private Form _registerForm { get; set; }
+        public Form MainView { get; set; }
         public string Username { get => txtUsername.Text; set => txtUsername.Text = value; }
         public string Password { get => txtPassword.Text; set => txtPassword.Text = value; }
         public string Message { get => lblMessage.Text; set => lblMessage.Text = value; }
@@ -43,7 +44,11 @@ namespace MFS.WinForms.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Presenter.Authenticate();
+            if (Presenter.Authenticate()) 
+            {
+                Hide();
+                MainView.Show();
+            }
         }
 
         private void lblRegister_Click(object sender, EventArgs e)

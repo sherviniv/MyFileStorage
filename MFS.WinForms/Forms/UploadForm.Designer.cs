@@ -38,12 +38,12 @@ namespace MFS.WinForms.Forms
             this.txtSelectedFile = new System.Windows.Forms.TextBox();
             this.btnSelect = new System.Windows.Forms.Button();
             this.chkPublic = new System.Windows.Forms.CheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picUpload = new System.Windows.Forms.PictureBox();
             this.lblCancel = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUpload)).BeginInit();
             this.SuspendLayout();
             // 
             // lbUpload
@@ -103,6 +103,7 @@ namespace MFS.WinForms.Forms
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(228)))), ((int)(((byte)(253)))));
             this.panel2.Controls.Add(this.txtSelectedFile);
+            this.panel2.Cursor = System.Windows.Forms.Cursors.No;
             this.panel2.Location = new System.Drawing.Point(17, 160);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(8, 6, 8, 5);
@@ -147,15 +148,17 @@ namespace MFS.WinForms.Forms
             this.chkPublic.Text = "Make It Public";
             this.chkPublic.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // picUpload
             // 
-            this.pictureBox1.Image = global::MFS.WinForms.Properties.Resources.add_file;
-            this.pictureBox1.Location = new System.Drawing.Point(181, 241);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(87, 77);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            this.picUpload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picUpload.Image = global::MFS.WinForms.Properties.Resources.add_file;
+            this.picUpload.Location = new System.Drawing.Point(181, 241);
+            this.picUpload.Name = "picUpload";
+            this.picUpload.Size = new System.Drawing.Size(87, 77);
+            this.picUpload.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picUpload.TabIndex = 12;
+            this.picUpload.TabStop = false;
+            this.picUpload.Click += new System.EventHandler(this.picUpload_Click);
             // 
             // lblCancel
             // 
@@ -178,7 +181,7 @@ namespace MFS.WinForms.Forms
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(279, 321);
             this.Controls.Add(this.lblCancel);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picUpload);
             this.Controls.Add(this.chkPublic);
             this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.panel2);
@@ -197,7 +200,7 @@ namespace MFS.WinForms.Forms
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUpload)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,7 +217,7 @@ namespace MFS.WinForms.Forms
         private System.Windows.Forms.TextBox txtSelectedFile;
         private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.CheckBox chkPublic;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picUpload;
         private System.Windows.Forms.Label lblCancel;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
     }

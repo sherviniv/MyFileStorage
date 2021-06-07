@@ -1,4 +1,6 @@
 ﻿using MFS.WinForms.Forms;
+using MFS.WinForms.Interfaces;
+using MFS.WinForms.Presenters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,12 +13,14 @@ using System.Windows.Forms;
 
 namespace MFS.WinForms.Views
 {
-    public partial class StorageView : UserControl
+    public partial class StorageView : UserControl, IStorageView
     {
         public StorageView()
         {
             InitializeComponent();
         }
+
+        public StoragePresenter Presenter { get; set; }
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
@@ -24,7 +28,7 @@ namespace MFS.WinForms.Views
             {
                 uploadForm.FileSelected += (obj, selectedFile) =>
                 {
-                 
+                    Presenter.UploadFile(selectedFile.fileName, selectedFile.filePath, selectedFile.isPublic);
                 };
                 uploadForm.ShowDialog();
             }

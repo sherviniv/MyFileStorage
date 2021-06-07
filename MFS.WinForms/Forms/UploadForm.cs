@@ -13,7 +13,7 @@ namespace MFS.WinForms.Forms
 {
     public partial class UploadForm : Form
     {
-        public event EventHandler<(string fileName,string filePath,bool isPublic)> FileSelected;
+        public event EventHandler<(string fileName, string filePath, bool isPublic)> FileSelected;
 
         public UploadForm()
         {
@@ -31,13 +31,31 @@ namespace MFS.WinForms.Forms
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 txtSelectedFile.Text = openFileDialog.SafeFileName;
-                FileSelected.Invoke(this, (txtFileName.Text, openFileDialog.FileName, chkPublic.Checked));
+                txtFileName.Text = string.IsNullOrEmpty(txtFileName.Text) ?
+                    openFileDialog.SafeFileName : txtFileName.Text;
             }
         }
 
         private void lblCancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void picUpload_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtFileName.Text))
+            {
+                MessageBox.Show("Please enter your file Name");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(openFileDialog.FileName))
+            {
+                MessageBox.Show("Please select your file");
+                return;
+            }
+
+            FileSelected.Invoke(this, (txtFileName.Text, openFileDialog.FileName, chkPublic.Checked));
         }
     }
 }

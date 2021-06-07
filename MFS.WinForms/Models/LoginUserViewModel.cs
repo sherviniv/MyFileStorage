@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace MFS.WinForms.Models
 {
+    [Serializable]
     public class LoginUserViewModel
     {
         public string Username { get; set; }

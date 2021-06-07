@@ -1,4 +1,5 @@
-﻿using MFS.Core.Utilities;
+﻿using MFS.Core.Services;
+using MFS.Core.Utilities;
 using MFS.Persistence.Repository;
 using MFS.WinForms.Interfaces;
 using MFS.WinForms.Models;
@@ -28,13 +29,18 @@ namespace MFS.WinForms.Presenters
         public bool Authenticate()
         {
             var hashPwd = Encrypt.HashString(_view.Password);
-            bool succeed = _repository.Get(
-                c => c.Username == _view.Username && hashPwd == c.Password).Any();
+            var user = _repository.Get(
+                c => c.Username == _view.Username && hashPwd == c.Password).FirstOrDefault();
+            bool succeed = user != null;
 
             _view.Message = succeed ? string.Empty : "Incorrect username or password";
 
             if (succeed)
+            {
+                CurrentUserService.UserId = user.ID;
+                CurrentUserService.Username = user.Username;
                 SetUserCredentials();
+            }
 
             return succeed;
         }

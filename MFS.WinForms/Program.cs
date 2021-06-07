@@ -37,11 +37,13 @@ namespace MFS.WinForms
 
             //Storage View
             var storageView = new StorageView();
+            var storagePresenter = new StoragePresenter(storageView, storageFileRepository);
 
             //MainForm
             var mainForm = new MainForm(storageView);
+            loginView.MainView = mainForm;
 
-            Application.Run(mainForm);
+            Application.Run(loginView);
         }
     }
 }
