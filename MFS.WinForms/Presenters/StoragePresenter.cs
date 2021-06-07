@@ -15,12 +15,15 @@ namespace MFS.WinForms.Presenters
     {
         private readonly IStorageView _view;
         private readonly StorageFileRepository _repository;
+        private readonly FilePermissionRepository _filePermissionRepository;
 
         public StoragePresenter(
             IStorageView view,
-            StorageFileRepository repository)
+            StorageFileRepository repository,
+            FilePermissionRepository filePermissionRepository)
         {
             _repository = repository;
+            _filePermissionRepository = filePermissionRepository;
             _view = view;
             _view.Presenter = this;
         }
@@ -44,6 +47,24 @@ namespace MFS.WinForms.Presenters
                 }
                 _repository.Add(model);
             }
+        }
+
+        public void GetPublicFiles()
+        {
+            _view.FilesList = _repository.Get(c => c.IsPublic);
+        }
+
+        public void GetSharedFiles()
+        {
+            var fileIds = _filePermissionRepository
+                .Get(c => c.UserID == CurrentUserService.UserId)
+                .Select(c => c.StorageFileID);
+            _view.FilesList = _repository.Get(c => fileIds.Contains(c.ID));
+        }
+
+        public void GetCurrentUserFiles()
+        {
+            _view.FilesList = _repository.Get(c => c.UserID == CurrentUserService.UserId);
         }
     }
 }

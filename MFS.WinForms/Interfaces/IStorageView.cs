@@ -1,4 +1,5 @@
-﻿using MFS.WinForms.Presenters;
+﻿using MFS.Persistence.Models;
+using MFS.WinForms.Presenters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace MFS.WinForms.Interfaces
     public interface IStorageView
     {
         StoragePresenter Presenter { get; set; }
+        List<StorageFile> FilesList { get; set; }
     }
 }

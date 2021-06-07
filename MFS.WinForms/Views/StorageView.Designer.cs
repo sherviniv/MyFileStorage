@@ -33,7 +33,7 @@ namespace MFS.WinForms.Views
             this.btnPublic = new System.Windows.Forms.Button();
             this.lbTitle = new System.Windows.Forms.Label();
             this.btnMyFiles = new System.Windows.Forms.Button();
-            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.filesPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnUpload = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
@@ -50,6 +50,7 @@ namespace MFS.WinForms.Views
             this.btnShared.TabIndex = 8;
             this.btnShared.Text = "Shared";
             this.btnShared.UseVisualStyleBackColor = true;
+            this.btnShared.Click += new System.EventHandler(this.btnShared_Click);
             // 
             // btnPublic
             // 
@@ -62,6 +63,7 @@ namespace MFS.WinForms.Views
             this.btnPublic.TabIndex = 9;
             this.btnPublic.Text = "Public";
             this.btnPublic.UseVisualStyleBackColor = true;
+            this.btnPublic.Click += new System.EventHandler(this.btnPublic_Click);
             // 
             // lbTitle
             // 
@@ -86,15 +88,17 @@ namespace MFS.WinForms.Views
             this.btnMyFiles.TabIndex = 8;
             this.btnMyFiles.Text = "My Files";
             this.btnMyFiles.UseVisualStyleBackColor = true;
+            this.btnMyFiles.Click += new System.EventHandler(this.btnMyFiles_Click);
             // 
-            // flowLayoutPanel
+            // filesPanel
             // 
-            this.flowLayoutPanel.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.flowLayoutPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(31, 125);
-            this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(558, 375);
-            this.flowLayoutPanel.TabIndex = 11;
+            this.filesPanel.AutoScroll = true;
+            this.filesPanel.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.filesPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.filesPanel.Location = new System.Drawing.Point(31, 125);
+            this.filesPanel.Name = "filesPanel";
+            this.filesPanel.Size = new System.Drawing.Size(516, 375);
+            this.filesPanel.TabIndex = 11;
             // 
             // btnUpload
             // 
@@ -114,8 +118,8 @@ namespace MFS.WinForms.Views
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(228)))), ((int)(((byte)(253)))));
-            this.Controls.Add(this.flowLayoutPanel);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.filesPanel);
             this.Controls.Add(this.lbTitle);
             this.Controls.Add(this.btnMyFiles);
             this.Controls.Add(this.btnShared);
@@ -134,7 +138,7 @@ namespace MFS.WinForms.Views
         private System.Windows.Forms.Button btnPublic;
         private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.Button btnMyFiles;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
+        private System.Windows.Forms.FlowLayoutPanel filesPanel;
         private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }

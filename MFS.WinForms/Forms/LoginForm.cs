@@ -44,11 +44,13 @@ namespace MFS.WinForms.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            btnLogin.Text = "Please wait";
             if (Presenter.Authenticate()) 
             {
                 Hide();
                 MainView.Show();
             }
+            btnLogin.Text = "Login";
         }
 
         private void lblRegister_Click(object sender, EventArgs e)

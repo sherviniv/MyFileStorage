@@ -56,6 +56,7 @@ namespace MFS.WinForms.Forms
             }
 
             FileSelected.Invoke(this, (txtFileName.Text, openFileDialog.FileName, chkPublic.Checked));
+            Close();
         }
     }
 }

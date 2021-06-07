@@ -32,6 +32,7 @@ namespace MFS.WinForms.Components
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblFileSize = new System.Windows.Forms.Label();
             this.picThumb = new System.Windows.Forms.PictureBox();
+            this.lblFormat = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picThumb)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,9 +50,9 @@ namespace MFS.WinForms.Components
             this.lblFileSize.AutoSize = true;
             this.lblFileSize.Location = new System.Drawing.Point(98, 127);
             this.lblFileSize.Name = "lblFileSize";
-            this.lblFileSize.Size = new System.Drawing.Size(57, 13);
+            this.lblFileSize.Size = new System.Drawing.Size(26, 13);
             this.lblFileSize.TabIndex = 3;
-            this.lblFileSize.Text = "File Name";
+            this.lblFileSize.Text = "size";
             // 
             // picThumb
             // 
@@ -65,10 +66,23 @@ namespace MFS.WinForms.Components
             this.picThumb.TabIndex = 2;
             this.picThumb.TabStop = false;
             // 
+            // lblFormat
+            // 
+            this.lblFormat.BackColor = System.Drawing.Color.Transparent;
+            this.lblFormat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblFormat.Font = new System.Drawing.Font("B Yekan", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblFormat.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblFormat.Location = new System.Drawing.Point(6, 27);
+            this.lblFormat.Name = "lblFormat";
+            this.lblFormat.Size = new System.Drawing.Size(141, 74);
+            this.lblFormat.TabIndex = 4;
+            this.lblFormat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FileDisplayComponent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblFormat);
             this.Controls.Add(this.lblFileSize);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.picThumb);
@@ -86,5 +100,6 @@ namespace MFS.WinForms.Components
         private System.Windows.Forms.PictureBox picThumb;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblFileSize;
+        private System.Windows.Forms.Label lblFormat;
     }
 }
