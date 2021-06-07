@@ -35,7 +35,6 @@ namespace MFS.WinForms.Views
             this.btnMyFiles = new System.Windows.Forms.Button();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnUpload = new System.Windows.Forms.Button();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
@@ -109,10 +108,7 @@ namespace MFS.WinForms.Views
             this.btnUpload.TabIndex = 9;
             this.btnUpload.Text = "Upload";
             this.btnUpload.UseVisualStyleBackColor = false;
-            // 
-            // openFileDialog
-            // 
-            this.openFileDialog.FileName = "openFileDialog1";
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // StorageView
             // 
@@ -125,6 +121,7 @@ namespace MFS.WinForms.Views
             this.Controls.Add(this.btnShared);
             this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.btnPublic);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.Name = "StorageView";
             this.Size = new System.Drawing.Size(620, 520);
             this.ResumeLayout(false);
@@ -139,7 +136,6 @@ namespace MFS.WinForms.Views
         private System.Windows.Forms.Button btnMyFiles;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
         private System.Windows.Forms.Button btnUpload;
-        private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }

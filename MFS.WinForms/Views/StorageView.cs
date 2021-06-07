@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MFS.WinForms.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,18 @@ namespace MFS.WinForms.Views
         public StorageView()
         {
             InitializeComponent();
+        }
+
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            using (var uploadForm = new UploadForm())
+            {
+                uploadForm.FileSelected += (obj, selectedFile) =>
+                {
+                 
+                };
+                uploadForm.ShowDialog();
+            }
         }
     }
 }

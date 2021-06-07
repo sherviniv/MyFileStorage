@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\FileDisplayComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\FileDisplayComponent.Designer.cs">
+      <DependentUpon>FileDisplayComponent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,12 @@
     <Compile Include="Forms\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UploadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UploadForm.Designer.cs">
+      <DependentUpon>UploadForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\ILoginView.cs" />
     <Compile Include="Interfaces\IRegisterView.cs" />
     <Compile Include="Models\LoginUserViewModel.cs" />
@@ -87,6 +99,9 @@
     <Compile Include="Views\StorageView.Designer.cs">
       <DependentUpon>StorageView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Components\FileDisplayComponent.resx">
+      <DependentUpon>FileDisplayComponent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UploadForm.resx">
+      <DependentUpon>UploadForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -134,7 +152,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Components\" />
+    <None Include="Resources\undraw_No_data_re_kwbl.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gradient.png" />
@@ -150,6 +168,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\two-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-file.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

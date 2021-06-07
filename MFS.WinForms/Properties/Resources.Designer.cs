@@ -63,6 +63,26 @@ namespace MFS.WinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_file {
+            get {
+                object obj = ResourceManager.GetObject("add_file", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap file_box {
+            get {
+                object obj = ResourceManager.GetObject("file_box", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lefLight {
             get {
                 object obj = ResourceManager.GetObject("lefLight", resourceCulture);
@@ -96,6 +116,16 @@ namespace MFS.WinForms.Properties {
         internal static System.Drawing.Bitmap two_user {
             get {
                 object obj = ResourceManager.GetObject("two_user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap undraw_No_data_re_kwbl {
+            get {
+                object obj = ResourceManager.GetObject("undraw_No_data_re_kwbl", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
