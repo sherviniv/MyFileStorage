@@ -14,13 +14,13 @@ namespace MFS.WinForms.Presenters
     public class StoragePresenter
     {
         private readonly IStorageView _view;
-        private readonly StorageFileRepository _repository;
-        private readonly FilePermissionRepository _filePermissionRepository;
+        private readonly IStorageFileRepository _repository;
+        private readonly IFilePermissionRepository _filePermissionRepository;
 
         public StoragePresenter(
             IStorageView view,
-            StorageFileRepository repository,
-            FilePermissionRepository filePermissionRepository)
+            IStorageFileRepository repository,
+            IFilePermissionRepository filePermissionRepository)
         {
             _repository = repository;
             _filePermissionRepository = filePermissionRepository;
@@ -51,7 +51,9 @@ namespace MFS.WinForms.Presenters
 
         public void GetPublicFiles()
         {
-            _view.FilesList = _repository.Get(c => c.IsPublic);
+            _view.FilesList = _repository.Get(c => c.IsPublic)
+                .OrderByDescending(c => c.ID)
+                .ToList();
         }
 
         public void GetSharedFiles()
@@ -59,15 +61,19 @@ namespace MFS.WinForms.Presenters
             var fileIds = _filePermissionRepository
                 .Get(c => c.UserID == CurrentUserService.UserId)
                 .Select(c => c.StorageFileID);
-            _view.FilesList = _repository.Get(c => fileIds.Contains(c.ID));
+            _view.FilesList = _repository.Get(c => fileIds.Contains(c.ID))
+                                         .OrderByDescending(c => c.ID)
+                                         .ToList();
         }
 
         public void GetCurrentUserFiles()
         {
-            _view.FilesList = _repository.Get(c => c.UserID == CurrentUserService.UserId);
+            _view.FilesList = _repository.Get(c => c.UserID == CurrentUserService.UserId)
+                                         .OrderByDescending(c => c.ID)
+                                         .ToList(); 
         }
 
-        public void RemoveFile(int fileId) 
+        public void RemoveFile(int fileId)
         {
             _repository.Delete(fileId);
         }

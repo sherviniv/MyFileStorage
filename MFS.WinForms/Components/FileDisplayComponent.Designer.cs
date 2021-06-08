@@ -29,6 +29,7 @@ namespace MFS.WinForms.Components
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblFileSize = new System.Windows.Forms.Label();
             this.picThumb = new System.Windows.Forms.PictureBox();
@@ -37,6 +38,7 @@ namespace MFS.WinForms.Components
             this.btnRemove = new System.Windows.Forms.Button();
             this.lblCreated = new System.Windows.Forms.Label();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.toolTipFileName = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picThumb)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +66,7 @@ namespace MFS.WinForms.Components
             // picThumb
             // 
             this.picThumb.BackColor = System.Drawing.SystemColors.Control;
-            this.picThumb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picThumb.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.picThumb.Image = global::MFS.WinForms.Properties.Resources.undraw_No_data_re_kwbl;
             this.picThumb.Location = new System.Drawing.Point(3, 3);
             this.picThumb.Name = "picThumb";
@@ -87,7 +89,7 @@ namespace MFS.WinForms.Components
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(86)))), ((int)(((byte)(226)))));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.SystemColors.Control;
@@ -155,5 +157,6 @@ namespace MFS.WinForms.Components
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Label lblCreated;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
+        private System.Windows.Forms.ToolTip toolTipFileName;
     }
 }

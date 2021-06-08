@@ -87,14 +87,23 @@
       <DependentUpon>UploadForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\ILoginView.cs" />
+    <Compile Include="Interfaces\IManageView.cs" />
     <Compile Include="Interfaces\IRegisterView.cs" />
     <Compile Include="Interfaces\IStorageView.cs" />
+    <Compile Include="Models\FilePermissionViewModel.cs" />
     <Compile Include="Models\LoginUserViewModel.cs" />
     <Compile Include="Presenters\LoginPresenter.cs" />
+    <Compile Include="Presenters\ManagePresenter.cs" />
     <Compile Include="Presenters\RegisterPresenter.cs" />
     <Compile Include="Presenters\StoragePresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\ManageView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ManageView.Designer.cs">
+      <DependentUpon>ManageView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\StorageView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -126,6 +135,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\ManageView.resx">
+      <DependentUpon>ManageView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\StorageView.resx">
       <DependentUpon>StorageView.cs</DependentUpon>
     </EmbeddedResource>

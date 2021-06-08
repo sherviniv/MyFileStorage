@@ -32,6 +32,7 @@ namespace MFS.WinForms.Components
                 picThumb.Image = ConvertToImage(file.FileContent);
             }
             btnRemove.Visible = editMode;
+            toolTipFileName.Show("Tooltip text goes here", picThumb);
         }
 
         public Image ConvertToImage(byte[] binary)

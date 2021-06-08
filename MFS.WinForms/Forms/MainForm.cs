@@ -16,12 +16,17 @@ namespace MFS.WinForms.Forms
     {
 
         private StorageView _storageView { get; set; }
+        private ManageView _manageView { get; set; }
 
-        public MainForm(StorageView storageView)
+        public MainForm(
+            StorageView storageView, 
+            ManageView manageView)
         {
             InitializeComponent();
             _storageView = storageView;
+            _manageView = manageView;
             panelViews.Controls.Add(_storageView);
+            panelViews.Controls.Add(_manageView);
         }
 
         private void btnStorage_Click(object sender, EventArgs e)
@@ -47,6 +52,12 @@ namespace MFS.WinForms.Forms
         private void timerDateTime_Tick(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Now.ToString("ddd, dd MMM yyy HH:mm:ss");
+        }
+
+        private void btnManage_Click(object sender, EventArgs e)
+        {
+            _manageView.LoadDropDowns();
+            _manageView.BringToFront();
         }
     }
 }
