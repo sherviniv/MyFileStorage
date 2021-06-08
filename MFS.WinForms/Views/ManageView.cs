@@ -18,6 +18,8 @@ namespace MFS.WinForms.Views
         public ManageView()
         {
             InitializeComponent();
+
+            gridFiles.ColumnHeadersDefaultCellStyle.Font = gridFiles.ColumnHeadersDefaultCellStyle.Font = lblGridStyle.Font;
         }
 
         public ManagePresenter Presenter { get; set; }

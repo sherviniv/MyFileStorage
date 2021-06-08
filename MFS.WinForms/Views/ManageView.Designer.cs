@@ -32,6 +32,7 @@ namespace MFS.WinForms.Views
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridFiles = new System.Windows.Forms.DataGridView();
             this.lblUser = new System.Windows.Forms.Label();
             this.cmbUsers = new System.Windows.Forms.ComboBox();
@@ -42,6 +43,7 @@ namespace MFS.WinForms.Views
             this.btnGrant = new System.Windows.Forms.Button();
             this.contextMenuGrid = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblGridStyle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridFiles)).BeginInit();
             this.contextMenuGrid.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +59,7 @@ namespace MFS.WinForms.Views
             this.gridFiles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(86)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(86)))), ((int)(((byte)(226)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Control;
@@ -65,6 +67,14 @@ namespace MFS.WinForms.Views
             this.gridFiles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridFiles.ColumnHeadersHeight = 45;
             this.gridFiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridFiles.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridFiles.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gridFiles.EnableHeadersVisualStyles = false;
             this.gridFiles.GridColor = System.Drawing.SystemColors.Control;
@@ -72,14 +82,14 @@ namespace MFS.WinForms.Views
             this.gridFiles.Margin = new System.Windows.Forms.Padding(4);
             this.gridFiles.Name = "gridFiles";
             this.gridFiles.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(86)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridFiles.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(86)))), ((int)(((byte)(226)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridFiles.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridFiles.RowHeadersVisible = false;
             this.gridFiles.RowHeadersWidth = 60;
             this.gridFiles.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -180,6 +190,17 @@ namespace MFS.WinForms.Views
             this.removeToolStripMenuItem.Text = "Remove";
             this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
+            // lblGridStyle
+            // 
+            this.lblGridStyle.AutoSize = true;
+            this.lblGridStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGridStyle.Location = new System.Drawing.Point(155, 83);
+            this.lblGridStyle.Name = "lblGridStyle";
+            this.lblGridStyle.Size = new System.Drawing.Size(77, 20);
+            this.lblGridStyle.TabIndex = 8;
+            this.lblGridStyle.Text = "Select File";
+            this.lblGridStyle.Visible = false;
+            // 
             // ManageView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,6 +211,7 @@ namespace MFS.WinForms.Views
             this.Controls.Add(this.cmbFiles);
             this.Controls.Add(this.cmbUsers);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblGridStyle);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.gridFiles);
@@ -216,5 +238,6 @@ namespace MFS.WinForms.Views
         private System.Windows.Forms.Button btnGrant;
         private System.Windows.Forms.ContextMenuStrip contextMenuGrid;
         private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
+        private System.Windows.Forms.Label lblGridStyle;
     }
 }
