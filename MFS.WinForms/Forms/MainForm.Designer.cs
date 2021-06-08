@@ -36,13 +36,13 @@ namespace MFS.WinForms.Forms
             this.lblDate = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnManage = new System.Windows.Forms.Button();
             this.btnStorage = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelViews = new System.Windows.Forms.Panel();
             this.timerDateTime = new System.Windows.Forms.Timer(this.components);
-            this.btnManage = new System.Windows.Forms.Button();
             this.sideBar.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -119,6 +119,22 @@ namespace MFS.WinForms.Forms
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnManage
+            // 
+            this.btnManage.FlatAppearance.BorderSize = 0;
+            this.btnManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManage.ForeColor = System.Drawing.Color.White;
+            this.btnManage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnManage.Location = new System.Drawing.Point(1, 181);
+            this.btnManage.Name = "btnManage";
+            this.btnManage.Size = new System.Drawing.Size(166, 62);
+            this.btnManage.TabIndex = 2;
+            this.btnManage.Text = "Manage";
+            this.btnManage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnManage.UseVisualStyleBackColor = true;
+            this.btnManage.Click += new System.EventHandler(this.btnManage_Click);
+            // 
             // btnStorage
             // 
             this.btnStorage.FlatAppearance.BorderSize = 0;
@@ -179,22 +195,6 @@ namespace MFS.WinForms.Forms
             this.timerDateTime.Interval = 1000;
             this.timerDateTime.Tick += new System.EventHandler(this.timerDateTime_Tick);
             // 
-            // btnManage
-            // 
-            this.btnManage.FlatAppearance.BorderSize = 0;
-            this.btnManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManage.ForeColor = System.Drawing.Color.White;
-            this.btnManage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnManage.Location = new System.Drawing.Point(1, 181);
-            this.btnManage.Name = "btnManage";
-            this.btnManage.Size = new System.Drawing.Size(166, 62);
-            this.btnManage.TabIndex = 2;
-            this.btnManage.Text = "Manage";
-            this.btnManage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnManage.UseVisualStyleBackColor = true;
-            this.btnManage.Click += new System.EventHandler(this.btnManage_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,6 +212,7 @@ namespace MFS.WinForms.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "My File Storage";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
             this.sideBar.ResumeLayout(false);
             this.sideBar.PerformLayout();
             this.panel2.ResumeLayout(false);
