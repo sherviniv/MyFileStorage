@@ -66,5 +66,10 @@ namespace MFS.WinForms.Presenters
         {
             _view.FilesList = _repository.Get(c => c.UserID == CurrentUserService.UserId);
         }
+
+        public void RemoveFile(int fileId) 
+        {
+            _repository.Delete(fileId);
+        }
     }
 }

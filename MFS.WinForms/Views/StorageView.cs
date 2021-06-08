@@ -34,28 +34,29 @@ namespace MFS.WinForms.Views
                     Presenter.UploadFile(selectedFile.fileName, selectedFile.filePath, selectedFile.isPublic);
                 };
                 uploadForm.ShowDialog();
+                btnMyFiles_Click(null, EventArgs.Empty);
             }
         }
 
         private void btnPublic_Click(object sender, EventArgs e)
         {
             Presenter.GetPublicFiles();
-            RenderFilesView();
+            RenderFilesView(false);
         }
 
         private void btnMyFiles_Click(object sender, EventArgs e)
         {
             Presenter.GetCurrentUserFiles();
-            RenderFilesView();
+            RenderFilesView(true);
         }
 
         private void btnShared_Click(object sender, EventArgs e)
         {
             Presenter.GetSharedFiles();
-            RenderFilesView();
+            RenderFilesView(false);
         }
 
-        private void RenderFilesView()
+        private void RenderFilesView(bool editMode)
         {
             filesPanel.Controls.Clear();
 
@@ -64,10 +65,20 @@ namespace MFS.WinForms.Views
 
             foreach (var f in FilesList)
             {
-                var thumbnail = new FileDisplayComponent(f);
-                //thumbnail.Click += Thumbnail_Click;
+                var thumbnail = new FileDisplayComponent(f, editMode);
+                thumbnail.FileRemoved += (obj, id) => 
+                {
+                    Presenter.RemoveFile(id);
+                    btnMyFiles_Click(null, EventArgs.Empty);
+                };
                 filesPanel.Controls.Add(thumbnail);
             }
         }
+
+        private void StorageView_Load(object sender, EventArgs e)
+        {
+            btnMyFiles_Click(null, EventArgs.Empty);
+        }
+
     }
 }

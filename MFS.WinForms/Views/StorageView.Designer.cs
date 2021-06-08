@@ -128,6 +128,7 @@ namespace MFS.WinForms.Views
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.Name = "StorageView";
             this.Size = new System.Drawing.Size(620, 520);
+            this.Load += new System.EventHandler(this.StorageView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

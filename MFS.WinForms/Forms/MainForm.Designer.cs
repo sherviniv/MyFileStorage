@@ -29,19 +29,29 @@ namespace MFS.WinForms.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.sideBar = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnStorage = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnStorage = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelViews = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.lblWelcome = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.timerDateTime = new System.Windows.Forms.Timer(this.components);
             this.sideBar.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // sideBar
             // 
+            this.sideBar.Controls.Add(this.lblUsername);
+            this.sideBar.Controls.Add(this.lblDate);
+            this.sideBar.Controls.Add(this.lblWelcome);
+            this.sideBar.Controls.Add(this.btnExit);
             this.sideBar.Controls.Add(this.btnStorage);
             this.sideBar.Controls.Add(this.panel2);
             this.sideBar.Controls.Add(this.panel1);
@@ -51,14 +61,21 @@ namespace MFS.WinForms.Forms
             this.sideBar.Size = new System.Drawing.Size(170, 520);
             this.sideBar.TabIndex = 0;
             // 
-            // panel1
+            // btnStorage
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(166, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(4, 520);
-            this.panel1.TabIndex = 1;
+            this.btnStorage.FlatAppearance.BorderSize = 0;
+            this.btnStorage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStorage.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStorage.ForeColor = System.Drawing.Color.White;
+            this.btnStorage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnStorage.Location = new System.Drawing.Point(1, 124);
+            this.btnStorage.Name = "btnStorage";
+            this.btnStorage.Size = new System.Drawing.Size(166, 79);
+            this.btnStorage.TabIndex = 2;
+            this.btnStorage.Text = "Storage";
+            this.btnStorage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnStorage.UseVisualStyleBackColor = true;
+            this.btnStorage.Click += new System.EventHandler(this.btnStorage_Click);
             // 
             // panel2
             // 
@@ -81,23 +98,14 @@ namespace MFS.WinForms.Forms
             this.label6.TabIndex = 11;
             this.label6.Text = "MFS";
             // 
-            // btnStorage
+            // panel1
             // 
-            this.btnStorage.FlatAppearance.BorderSize = 0;
-            this.btnStorage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStorage.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStorage.ForeColor = System.Drawing.Color.White;
-            this.btnStorage.Image = ((System.Drawing.Image)(resources.GetObject("btnStorage.Image")));
-            this.btnStorage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnStorage.Location = new System.Drawing.Point(3, 124);
-            this.btnStorage.Name = "btnStorage";
-            this.btnStorage.Size = new System.Drawing.Size(163, 79);
-            this.btnStorage.TabIndex = 2;
-            this.btnStorage.Text = "Storage";
-            this.btnStorage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnStorage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnStorage.UseVisualStyleBackColor = true;
-            this.btnStorage.Click += new System.EventHandler(this.btnStorage_Click);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(166, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(4, 520);
+            this.panel1.TabIndex = 1;
             // 
             // panelViews
             // 
@@ -106,6 +114,68 @@ namespace MFS.WinForms.Forms
             this.panelViews.Name = "panelViews";
             this.panelViews.Size = new System.Drawing.Size(620, 520);
             this.panelViews.TabIndex = 1;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnExit.Location = new System.Drawing.Point(1, 380);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(165, 79);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "Exit";
+            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
+            this.lblWelcome.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(228)))), ((int)(((byte)(253)))));
+            this.lblWelcome.Location = new System.Drawing.Point(4, 471);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(61, 17);
+            this.lblWelcome.TabIndex = 7;
+            this.lblWelcome.Text = "Welcome";
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsername.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.lblUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(86)))), ((int)(((byte)(226)))));
+            this.lblUsername.Location = new System.Drawing.Point(64, 471);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(35, 17);
+            this.lblUsername.TabIndex = 7;
+            this.lblUsername.Text = "User";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblDate.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.lblDate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(228)))), ((int)(((byte)(253)))));
+            this.lblDate.Location = new System.Drawing.Point(4, 494);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(63, 17);
+            this.lblDate.TabIndex = 7;
+            this.lblDate.Text = "DateTime";
+            // 
+            // timerDateTime
+            // 
+            this.timerDateTime.Enabled = true;
+            this.timerDateTime.Interval = 1000;
+            this.timerDateTime.Tick += new System.EventHandler(this.timerDateTime_Tick);
             // 
             // MainForm
             // 
@@ -123,7 +193,9 @@ namespace MFS.WinForms.Forms
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "My File Storage";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.sideBar.ResumeLayout(false);
+            this.sideBar.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -138,5 +210,10 @@ namespace MFS.WinForms.Forms
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnStorage;
         private System.Windows.Forms.Panel panelViews;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Timer timerDateTime;
     }
 }
